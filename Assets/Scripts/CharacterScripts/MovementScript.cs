@@ -5,8 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Xml.Linq;
 using UnityEngine;
 
-
-// TODO: FIX NON KEYBINDED MOVEMENT, FORWARD IS WHERE THE CAMERA IS POINTING
 public class MovementScript : MonoBehaviour
 {
     [Header("Movement")]
@@ -27,6 +25,7 @@ public class MovementScript : MonoBehaviour
     private bool isGrounded;
 
     [SerializeField] private Transform orientation;
+    
 
     [Header("Input Check")]
     private float horizontalInput;
