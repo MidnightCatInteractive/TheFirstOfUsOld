@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -24,8 +25,8 @@ public class PauseMenuScript : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
         Cursor.visible = true;
+        Time.timeScale = 0f;
         isPaused = true;
     }
 
@@ -33,7 +34,18 @@ public class PauseMenuScript : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        Cursor.visible = true;
         isPaused = false;
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        // This doesn't work in editor, only when we build
+        Application.Quit();
     }
 }
