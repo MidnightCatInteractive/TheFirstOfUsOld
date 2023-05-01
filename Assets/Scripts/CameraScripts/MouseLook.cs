@@ -19,15 +19,18 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX * Time.fixedDeltaTime;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivityY * Time.fixedDeltaTime;
+        if (!PauseMenuScript.isPaused)
+        {
+            float mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX * Time.fixedDeltaTime;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivityY * Time.fixedDeltaTime;
 
-        rotationX -= mouseY;
-        rotationY += mouseX;
+            rotationX -= mouseY;
+            rotationY += mouseX;
 
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+            rotationX = Mathf.Clamp(rotationX, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
-        orientation.rotation = Quaternion.Euler(0, rotationY, 0);
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
+            orientation.rotation = Quaternion.Euler(0, rotationY, 0);
+        }
     }
 }

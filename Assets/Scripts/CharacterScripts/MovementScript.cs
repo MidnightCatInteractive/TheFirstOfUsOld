@@ -43,14 +43,17 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, _groundLayer);
-        GetInput();
-        if (isGrounded)
-            _rigidbody.drag = groundDrag;
-        else _rigidbody.drag = 0;
+        if (!PauseMenuScript.isPaused)
+        {
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, _groundLayer);
+            GetInput();
+            if (isGrounded)
+                _rigidbody.drag = groundDrag;
+            else _rigidbody.drag = 0;
 
-        SpeedControl();
-        MovePlayer();
+            SpeedControl();
+            MovePlayer();
+        }
     }
 
     private void GetInput()
