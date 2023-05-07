@@ -1245,7 +1245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561460330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7590704, y: 2.016047, z: 8.813875}
+  m_LocalPosition: {x: 125.9, y: 23.59, z: 228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  m_Database: {fileID: 0}
+  m_Database: {fileID: 11400000, guid: 587c10ba156dff145b635918c5d8b79e, type: 2}
   m_ChildDatabases: []
   onDataLoaded:
     m_PersistentCalls:
