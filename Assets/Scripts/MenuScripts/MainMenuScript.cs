@@ -11,6 +11,11 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("Scene");
     }
 
+    public void GoToSettings()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
+
     public void QuitGame()
     {
         // This doesn't work in editor, only when we build
