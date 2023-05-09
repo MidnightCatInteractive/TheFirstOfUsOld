@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Scene");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void GoToSettings()
