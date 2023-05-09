@@ -8,7 +8,7 @@ using TMPro;
 
 [RequireComponent(typeof(AudioMixer))]
 [RequireComponent(typeof(Dropdown))]
-public class SettingsMenuScript : MonoBehaviour
+public class OptionsMenuScript : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public TMP_Dropdown resolutionDropdown;
