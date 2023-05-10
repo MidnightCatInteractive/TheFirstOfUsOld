@@ -17,8 +17,7 @@ public class PauseMenuScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused) ResumeGame();
-            else PauseGame();
+            if (!isPaused) PauseGame();
         }
     }
 
@@ -27,7 +26,7 @@ public class PauseMenuScript : MonoBehaviour
         pauseMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         isPaused = true;
     }
 
@@ -35,6 +34,8 @@ public class PauseMenuScript : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         isPaused = false;
     }
 
@@ -44,7 +45,7 @@ public class PauseMenuScript : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void QuitGame()
+    public void ExitGame()
     {
         // This doesn't work in editor, only when we build
         Application.Quit();
