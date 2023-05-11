@@ -1498,7 +1498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   groundDrag: 2
-  jumpForce: 5
+  jumpForce: 6
   jumpCooldown: 1
   airMultiplier: 0
   playerHeight: 2
